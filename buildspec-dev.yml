@@ -22,6 +22,9 @@ phases:
   build:
     commands:
       - pwd
+      - ls
+      - which terraform
+      - ls /usr/bin
       # - cd "$CODEBUILD_SRC_DIR"
       - echo " building"
       - terraform init -no-color
