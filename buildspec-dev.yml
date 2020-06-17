@@ -10,17 +10,17 @@ phases:
       # install required binary
       - "curl -s -qL -o /usr/bin/jq https://stedolan.github.io/jq/download/linux64/jq"
       - "chmod +x /usr/bin/jq"
-      - "cd /usr/bin"
+      - cd /usr/bin
       - pwd
       - "curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip"
       - ls terraform.zip
       - pwd
       - "unzip -o terraform.zip"
       - pwd
-      - chmod +x /codebuild/output/src916379778/src/terraform
-      - /codebuild/output/src916379778/src/terraform --version
-      - mv terraform /usr/bin/
-      - "chmod +x /usr/bin/terraform"
+      #- chmod +x /codebuild/output/src916379778/src/terraform
+      #- /codebuild/output/src916379778/src/terraform --version
+      #- mv terraform /usr/bin/
+      #- "chmod +x /usr/bin/terraform"
       - ls -al /usr/bin/terraform
       - /usr/bin/terraform --version
 
