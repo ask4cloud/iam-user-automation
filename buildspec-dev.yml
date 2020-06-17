@@ -17,7 +17,7 @@ phases:
       - pwd
       - "unzip -o terraform.zip"
       - pwd
-      - chmod + x /codebuild/output/src916379778/src/terraform
+      - chmod +x /codebuild/output/src916379778/src/terraform
       - /codebuild/output/src916379778/src/terraform --version
       - mv terraform /usr/bin/
       - "chmod +x /usr/bin/terraform"
