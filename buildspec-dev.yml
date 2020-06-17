@@ -19,7 +19,7 @@ phases:
       - pwd
       - mv terraform /usr/bin/
       - "chmod +x /usr/bin/terraform"
-      - ls /usr/bin/terraform
+      - ls -al /usr/bin/terraform
 
   pre_build:
     commands:
@@ -32,6 +32,7 @@ phases:
       - ls
       # - cd "$CODEBUILD_SRC_DIR"
       - echo " building"
+      - ls -al /usr/bin/terraform
       - /usr/bin/terraform init -no-color
       - /usr/bin/terraform plan -no-color
       - /usr/bin/terraform apply -no-color
