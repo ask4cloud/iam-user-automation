@@ -2,7 +2,7 @@ version: 0.1
 
 env:
   variables:
-    TF_VERSION: "0.10.7"
+    TF_VERSION: "0.12.26"
 phases:
 
   install:
