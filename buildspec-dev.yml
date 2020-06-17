@@ -17,12 +17,8 @@ phases:
       - pwd
       - "unzip -o terraform.zip"
       - pwd
-      #- chmod +x /codebuild/output/src916379778/src/terraform
-      #- /codebuild/output/src916379778/src/terraform --version
-      #- mv terraform /usr/bin/
-      #- "chmod +x /usr/bin/terraform"
       - ls -al /usr/bin/terraform
-      - /usr/bin/terraform --version
+      #- /usr/bin/terraform --version
 
   pre_build:
     commands:
@@ -36,9 +32,9 @@ phases:
       # - cd "$CODEBUILD_SRC_DIR"
       - echo " building"
       - ls -al /usr/bin/terraform
-      - terraform init -no-color
-      - /usr/bin/terraform plan -no-color
-      - /usr/bin/terraform apply -no-color
+      #- terraform init -no-color
+      #- terraform plan -no-color
+      #- terraform apply -no-color
 
   post_build:
     commands:
