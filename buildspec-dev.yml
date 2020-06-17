@@ -11,8 +11,12 @@ phases:
       - "curl -s -qL -o /usr/bin/jq https://stedolan.github.io/jq/download/linux64/jq"
       - "chmod +x /usr/bin/jq"
       - "cd /usr/bin"
+      - pwd
       - "curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip"
+      - ls terraform.zip
+      - pwd
       - "unzip -o terraform.zip"
+      - pwd
 
   pre_build:
     commands:
@@ -23,7 +27,6 @@ phases:
     commands:
       - pwd
       - ls
-      - ls /usr/bin
       # - cd "$CODEBUILD_SRC_DIR"
       - echo " building"
       - /usr/bin/terraform init -no-color
