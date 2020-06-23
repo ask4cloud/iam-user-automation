@@ -29,12 +29,12 @@ phases:
     commands:
       - pwd
       - ls
-      # - cd "$CODEBUILD_SRC_DIR"
+      - cd "$CODEBUILD_SRC_DIR"
       - echo " building"
       - ls -al /usr/bin/terraform
-      #- terraform init -no-color
-      #- terraform plan -no-color
-      #- terraform apply -no-color
+      - terraform init -no-color
+      - terraform plan -no-color
+      - terraform apply -no-color
 
   post_build:
     commands:
