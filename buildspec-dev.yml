@@ -18,7 +18,7 @@ phases:
       - "unzip -o terraform.zip"
       - pwd
       - ls -al /usr/bin/terraform
-      #- /usr/bin/terraform --version
+      - /usr/bin/terraform --version
 
   pre_build:
     commands:
