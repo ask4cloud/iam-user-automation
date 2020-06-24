@@ -19,7 +19,7 @@ variable "create_iam_access_key" {
 variable "name" {
   description = "Desired name for the IAM user"
   type        = string
-  default     = "kumar-terraform"
+  default     = "kumar-terraform-2"
 }
 
 variable "path" {
