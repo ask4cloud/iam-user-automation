@@ -35,7 +35,7 @@ phases:
       - ls -al /usr/bin/terraform
       - terraform init -no-color
       - terraform plan -no-color
-      - terraform apply -no-color
+      - terraform apply --auto-approve -no-color
 
   post_build:
     commands:
