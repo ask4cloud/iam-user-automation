@@ -12,12 +12,13 @@ phases:
       - "chmod +x /usr/bin/jq"
       - cd /usr/bin
       - pwd
-      - "wget -q  https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip"
+      - "curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip"
       - ls terraform.zip
       - pwd
       - "unzip -o terraform.zip"
       - pwd
       - ls -al /usr/bin/terraform
+      - "chmod +x /usr/bin/terraform"
       - /usr/bin/terraform --version
 
   pre_build:
